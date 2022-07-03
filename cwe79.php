@@ -1,5 +1,6 @@
 <?php
 // CWE 79
     $username = $_GET['username'];
-    echo '<div class="header"> Welcome, ' . $username . '</div>';
+    $encodedUsername = filter_var($username, FILTER_FLAG_ENCODE_HIGH)
+    echo '<div class="header"> Welcome, ' . $encodedUsername . '</div>';
 ?>
